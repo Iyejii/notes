@@ -1,0 +1,14 @@
+1. architecture
+registry provider(container) consumer monitor 
+2. process
+  container: boot/load/run + provider
+  provider: provide service
+  consumer: subscribe needed service
+  registry: return provider address->consumer; Long-lived connection --changes
+    # multicast
+    # zk
+    # redis
+    # simple
+  monitor: store cumulative times and period 
+    
+  consumer choose provider by load-balanced algorithm, substitute it if lose
