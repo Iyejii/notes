@@ -1,0 +1,21 @@
+1. What
+  一站式研发协同平台，提供研发全生命周期管理服务；aone对我们新人来说就是一个代码管理平台，代码实际上是保存在gitlab上的，但是在aone上进行应用的拉变更、上预发、上线等等操作。
+2. operations
+  git clone 应用git地址
+  git pull
+  git checkout 分支地址
+
+  #同步本地代码到aone
+  git add .
+  git commit -m "具体变更‘
+  git push
+3. process
+  new branch -> test -> online -> deploy
+4. env
+  项目环境
+  日常环境
+  预发环境
+  线上环境
+  Aone每个日常、预发线上环境都有一个release分支。让你的分支进入这个环境时，实际上是你的代码被合并（merge）到了发布分支上了。
+
+  项目上线了后，你的代码会自动合并到master分支。因此不需要你手动合代码。正因如此，在代码发布到各个环境中时，请先合并master的代码，以免冲突。星期二、四因为是发布日，因此是代码冲突的高峰期。
