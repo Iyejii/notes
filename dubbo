@@ -1,14 +1,33 @@
 1. architecture
 registry provider(container) consumer monitor 
+
 2. process
   container: boot/load/run + provider
   provider: provide service
-  consumer: subscribe needed service
+  consumer: subscribe needed service; consumer choose provider by load-balanced algorithm, substitute it if lose
   registry: return provider address->consumer; Long-lived connection --changes
     # multicast
-    # zk
-    # redis
+    # zk : divided,tree, directory, cluster, automatically recover(restart) and delete (when exception)
+    # redis  
     # simple
   monitor: store cumulative times and period 
-    
-  consumer choose provider by load-balanced algorithm, substitute it if lose
+  
+3. application
+#3.1 with Spring
+set in configuration file(xml -- spring handlers have class to resolve it) -> use as bean
+#3.2 extensive
+jdk spi: META-INF K-V(KEY-imp interface)   ->   url parameters  
+ExtensionLoader find an impl with both {KEY & Interface name}
+adaptive : agent class ; determined by dynamic parameters 
+automatic wrapper: protocol
+#3.3 url instead of Model to communicate
+e.q. registry://0.0.0.0:9090?codec=registry&transporter=netty
+
+4. startup process
+$ registry
+synchronizer: configuration loading (to memory); sign up registry info to database ; 5 timers
+
+#AutoRedirectTask: > 1.2 average transfer to others ====== load balanced
+receiver
+
+
