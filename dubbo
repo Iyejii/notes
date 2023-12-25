@@ -12,7 +12,7 @@ registry provider(container) consumer monitor
     # simple
   monitor: store cumulative times and period 
   
-3. application
+3. application   https://ata.atatech.org/articles/11000019094?spm=ata.23639746.0.0.23525f5eUHiW7k
 #3.1 with Spring
 set in configuration file(xml -- spring handlers have class to resolve it) -> use as bean
 #3.2 extensive
