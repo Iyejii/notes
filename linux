@@ -1,0 +1,6 @@
+ALL == FILES
+
+cd
+ll
+ls -l; ls
+mkdir -m 755    authority and limit     rwx   creator--of the same group--public
