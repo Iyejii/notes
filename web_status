@@ -1,5 +1,17 @@
 1**：information -- received request is processing
+
 2**：success -- completed processing successfully
+  200  OK     e.q. query -> respond correctly
+  201  created    process successfully & create a new resource(e.q.  a new user)
+  202  accepted    but haven't processed
+  204  no content    have processed but no reponse
+
 3**：redirection -- require supplementary operation to finish
+  301  moved permanently    e.q.change url
+  302  found    temporarily moved
+
 4**：client error -- server failed to process request
+  400 Bad request    HTTP request has sth wrong (illegal parameter or wrong method)
+  401  unauthorized    has no 
 5**：server error -- server did wrong
+
