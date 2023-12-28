@@ -11,7 +11,10 @@
   302  found    temporarily moved
 
 4**：client error -- server failed to process request
-  400 Bad request    HTTP request has sth wrong (illegal parameter or wrong method)
-  401  unauthorized    has no 
+  400  Bad request    HTTP request has sth wrong (illegal parameter or wrong method)
+  401  unauthorized    has no permission
+
 5**：server error -- server did wrong
+  500  Internal Server Error -- server goes wrong(bug) e.q. raise exception but haven't been processed successfully
+  502  bad gateway -- gateway transfer to server but received a wrong reponse
 
