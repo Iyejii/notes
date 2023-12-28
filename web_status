@@ -1,0 +1,5 @@
+1**：information -- received request is processing
+2**：success -- completed processing successfully
+3**：redirection -- require supplementary operation to finish
+4**：client error -- server failed to process request
+5**：server error -- server did wrong
